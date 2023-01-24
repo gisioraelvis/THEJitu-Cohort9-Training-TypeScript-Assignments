@@ -164,3 +164,27 @@ class Car {
 // for (const iterator of sampleString) {
 //   console.log(iterator);
 // }
+
+// deeply nested object
+const person = {
+  name: "John",
+  age: 20,
+  residence: "Nairobi",
+  work: "Software Developer",
+  address: {
+    street: "Kenyatta Avenue",
+    city: "Nairobi",
+    country: "Kenya",
+  },
+  education: [
+    { name: "High School", year: 2010 },
+    { name: "College", year: 2014 },
+    { name: "University", year: 2018 },
+  ],
+};
+
+let {
+  education: [, , { year }],
+} = person;
+
+console.log(year);
